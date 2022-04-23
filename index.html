@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Page</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./CSS/css/all.min.css" />
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body onload="onload()">
+    <div class="container">
+      <header class="form-name">Create your account</header>
+
+      <div>
+        <form id="signup-form">
+          <div class="field-name-block">
+            <label class="field-name">First Name:</label>
+          </div>
+          <div class="field-input-block">
+            <input
+              type="text"
+              id="firstname"
+              placeholder="First Name"
+              maxlength="15"
+            />
+            <i
+              id="firstNameWarning"
+              class="fas fa-exclamation-circle warning warning-hide"
+            >
+            </i>
+          </div>
+          <div class="field-name-block">
+            <label class="field-name">Last Name:</label>
+          </div>
+          <div class="field-input-block">
+            <input
+              type="text"
+              id="lastname"
+              placeholder="Last Name"
+              maxlength="15"
+            />
+            <i
+              id="lastNameWarning"
+              class="fas fa-exclamation-circle warning warning-hide"
+            ></i>
+          </div>
+          <div class="field-name-block">
+            <label class="field-name">Email:</label>
+          </div>
+          <div class="field-input-block">
+            <input
+              type="text"
+              id="email"
+              placeholder="email@example.com"
+              maxlength="15"
+            />
+            <i
+              id="emailWarning"
+              class="fas fa-exclamation-circle warning warning-hide"
+            ></i>
+          </div>
+          <div class="field-name-block">
+            <label class="field-name">Password:</label>
+          </div>
+          <div class="field-input-block">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              maxlength="20"
+            />
+            <i
+              id="passwordWarning"
+              class="fas fa-exclamation-circle warning warning-hide"
+            ></i>
+          </div>
+          <div class="field-name-block">
+            <label class="field-name">Confirm your password:</label>
+          </div>
+          <div class="field-input-block">
+            <input
+              type="password"
+              id="confirm"
+              placeholder="Confirm Your Password"
+              maxlength="20"
+            />
+            <i
+              id="confirmWarning"
+              class="fas fa-exclamation-circle warning warning-hide"
+            ></i>
+          </div>
+          <div class="buttons-block">
+            <input
+              type="button"
+              value="Sign Up"
+              class="button"
+              onclick="onSubmitClick()"
+            />
+            <input
+              type="reset"
+              value="Cancel"
+              class="button"
+              onclick="onCancelClick()"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -76,3 +76,13 @@ input {
   display: none !important;
 
 }
+.checkbox {
+  text-align: center;
+}
+
+.checkbox input {
+  width: auto;
+}
+.checkbox span {
+  color: white;
+}

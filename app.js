@@ -5,6 +5,7 @@ var regexEmail = /^[a-zA-Z0-9.-_]+@[a-zA-Z]+.(com|org|co.in|co.uk)$/;
 var isValidEmail = false;
 var isValidPassword = false;
 var isValidConfirmPassword = false;
+var isValidAgree = false;
 
 function onLoad() {
   var firstNameWarning = document.getElementById("firstNameWarning");
@@ -89,13 +90,26 @@ function onSubmitClick() {
     isValidConfirmPassword = true;
   }
 
+  //checkbox validation
+  var isAgree = document.querySelector(".checkbox");
+  var isChecked = isAgree.childNodes[1];
+  isChecked.addEventListener("click", checkAgree);
+  function checkAgree() {
+    if (!isChecked.checked) {
+      isValidAgree = false;
+    } else {
+      isValidAgree = true;
+    }
+  }
+
   //On successfull submission
   if (
     isValidFirstName &&
     isValidLastName &&
     isValidEmail &&
     isValidPassword &&
-    isValidConfirmPassword
+    isValidConfirmPassword &&
+    isValidAgree
   ) {
     alert("Success");
     document.getElementById("signup-form").reset();
@@ -108,4 +122,5 @@ function onCancelClick() {
   emailWarning.classList.add("warning-hide");
   passwordWarning.classList.add("warning-hide");
   confirmWarning.classList.add("warning-hide");
+  document.querySelector(".checkbox").childNodes[1].checked = false;
 }

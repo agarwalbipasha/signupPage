@@ -7,13 +7,13 @@ var isValidPassword = false;
 var isValidConfirmPassword = false;
 var isValidAgree = false;
 
-function onLoad() {
-  var firstNameWarning = document.getElementById("firstNameWarning");
-  var lastNameWarning = document.getElementById("lastNameWarning");
-  var emailWarning = document.getElementById("emailWarning");
-  var passwordWarning = document.getElementById("passwordWarning");
-  var confirmWarning = document.getElementById("confirmWarning");
-}
+// function onLoad() {
+//   var firstNameWarning = document.getElementById("firstNameWarning");
+//   var lastNameWarning = document.getElementById("lastNameWarning");
+//   var emailWarning = document.getElementById("emailWarning");
+//   var passwordWarning = document.getElementById("passwordWarning");
+//   var confirmWarning = document.getElementById("confirmWarning");
+// }
 
 function onSubmitClick() {
   //First Name Validation
